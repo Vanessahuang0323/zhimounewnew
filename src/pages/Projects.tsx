@@ -155,8 +155,8 @@ export default function Projects() {
           <div className="grid md:grid-cols-2 gap-16 items-center mb-20">
             <div className="order-2 md:order-1">
               <img
-                src="/uploads/gaoxueliang-main.jpg"
-                alt="高雪亮老師與創作"
+                src="/images/image.png"
+                alt="伊蔣藝術工作室"
                 className="rounded-2xl shadow-xl"
               />
             </div>
