@@ -1,4 +1,4 @@
-import { Target, Link2, Repeat, TrendingUp, CheckCircle } from 'lucide-react';
+import { Target, Link2, Repeat, TrendingUp, CheckCircle, Compass, Smartphone, MessageSquare, Briefcase } from 'lucide-react';
 
 export default function About() {
   const vccSteps = [
@@ -77,22 +77,26 @@ export default function About() {
     {
       title: '品牌定位與重塑',
       description: '深入文化脈絡,提煉品牌核心價值,建立獨特的市場定位與識別系統',
-      icon: '🎯',
+      icon: Compass,
+      color: 'from-[#8B6F47] to-[#B8674E]',
     },
     {
       title: '數位行銷策略',
       description: '整合社群媒體、內容行銷與數據分析,制定精準的數位推廣策略',
-      icon: '📱',
+      icon: Smartphone,
+      color: 'from-[#2C5F7C] to-[#8B6F47]',
     },
     {
       title: '社群內容經營',
       description: '創造有溫度的內容,建立品牌與消費者之間的真實連結與對話',
-      icon: '✨',
+      icon: MessageSquare,
+      color: 'from-[#B8674E] to-[#D97B4A]',
     },
     {
       title: '專案企劃執行',
       description: '從概念發想到落地執行,提供全方位的專案管理與整合服務',
-      icon: '🚀',
+      icon: Briefcase,
+      color: 'from-[#8B6F47] to-[#2C5F7C]',
     },
   ];
 
@@ -229,7 +233,9 @@ export default function About() {
                 key={index}
                 className="group bg-white rounded-2xl p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-2 border-transparent hover:border-[#8B6F47]"
               >
-                <div className="text-5xl mb-4">{service.icon}</div>
+                <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
+                  <service.icon className="text-white" size={32} />
+                </div>
                 <h3 className="text-2xl font-bold text-[#3A3A3A] mb-3 group-hover:text-[#8B6F47] transition-colors">
                   {service.title}
                 </h3>
