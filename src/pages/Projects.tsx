@@ -10,7 +10,11 @@ import {
   Heart,
 } from 'lucide-react';
 
-export default function Projects() {
+interface ProjectsProps {
+  onNavigate?: (page: string, productId?: string) => void;
+}
+
+export default function Projects({ onNavigate }: ProjectsProps = {}) {
   const products = [
     {
       id: 1,
@@ -263,7 +267,14 @@ export default function Projects() {
                   <p className="text-gray-600 mb-4 leading-relaxed">{product.description}</p>
                   <div className="flex items-center justify-between">
                     <span className="text-lg font-bold text-[#8B6F47]">{product.price}</span>
-                    <button className="px-6 py-2 bg-[#8B6F47] text-white rounded-lg hover:bg-[#B8674E] transition-colors">
+                    <button
+                      onClick={() => {
+                        if (product.id === 1 && onNavigate) {
+                          onNavigate('product', 'aboriginal-pouch');
+                        }
+                      }}
+                      className="px-6 py-2 bg-[#8B6F47] text-white rounded-lg hover:bg-[#B8674E] transition-colors"
+                    >
                       {product.status === 'available' ? '了解更多' : '敬請期待'}
                     </button>
                   </div>

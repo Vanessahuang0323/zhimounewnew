@@ -4,19 +4,25 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import About from './pages/About';
 import Projects from './pages/Projects';
+import ProductsList from './pages/Products';
+import ProductDetail from './pages/ProductDetail';
 import Contact from './pages/Contact';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
+  const [productId, setProductId] = useState<string | null>(null);
 
-  const handleNavigate = (page: string) => {
+  const handleNavigate = (page: string, productId?: string) => {
+    if (productId) {
+      setProductId(productId);
+    }
     setCurrentPage(page);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, [currentPage]);
+  }, [currentPage, productId]);
 
   const renderPage = () => {
     switch (currentPage) {
@@ -26,6 +32,10 @@ function App() {
         return <About />;
       case 'projects':
         return <Projects />;
+      case 'products':
+        return <ProductsList onNavigate={handleNavigate} />;
+      case 'product':
+        return <ProductDetail onNavigate={handleNavigate} />;
       case 'contact':
         return <Contact />;
       default:
