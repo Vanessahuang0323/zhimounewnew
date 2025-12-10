@@ -49,7 +49,9 @@ export default function Footer() {
             <h3 className="font-bold mb-4 text-[#D97B4A]">追蹤我們</h3>
             <div className="flex space-x-4 mb-4">
               <a
-                href="#"
+                href="https://www.instagram.com/kuxul_select?igsh=OTZkYXZtc294czZs"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-[#8B6F47] transition-colors"
               >
                 <Instagram size={20} />
