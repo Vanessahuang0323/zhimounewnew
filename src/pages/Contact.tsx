@@ -142,7 +142,9 @@ export default function Contact() {
                 </p>
                 <div className="space-y-4">
                   <a
-                    href="#"
+                    href="https://www.instagram.com/kuxul_select?igsh=OTZkYXZtc294czZs"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex items-center justify-between p-4 bg-white rounded-lg hover:shadow-md transition-all group"
                   >
                     <div className="flex items-center space-x-3">
@@ -158,7 +160,9 @@ export default function Contact() {
                   </a>
 
                   <a
-                    href="#"
+                    href="https://www.threads.com/@kuxul_select?igshid=NTc4MTIwNjQ2YQ=="
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex items-center justify-between p-4 bg-white rounded-lg hover:shadow-md transition-all group"
                   >
                     <div className="flex items-center space-x-3">

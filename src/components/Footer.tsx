@@ -57,13 +57,15 @@ export default function Footer() {
                 <Instagram size={20} />
               </a>
               <a
-                href="#"
+                href="https://www.threads.com/@kuxul_select?igshid=NTc4MTIwNjQ2YQ=="
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-[#8B6F47] transition-colors"
               >
                 <MessageCircle size={20} />
               </a>
               <a
-                href="#"
+                href="mailto:contact@weaving-studio.com"
                 className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-[#8B6F47] transition-colors"
               >
                 <Mail size={20} />
